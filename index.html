@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment 002</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
-
-<body>
+<body onload="gallaryApp.createGallary()">
     <header>
         <div class="row">
             <div class="col-8">
@@ -23,22 +23,23 @@
             <div class="col-8">
                 <h2>Simple responsive scalable photo gallery template</h2>
             </div>
-            <div class="col-4">
+            <div class="col-4 sm-hide">
                 <input type="button" value="Contact us" />
             </div>
         </div>
     </header>
     <div class="main-container row">
         <div class="image-galary col-8">
-            <div class="big-image">
-                <img class="big-img" src="/Designs/assets/largePics/9910_04_7349_web.jpg" alt="largePics">
+            <div class="big-image-container">
+                <img class="big-img" src="/Designs/assets/largePics/9910_04_7349_web.jpg" alt="selected large Image">
+                <p class="big-img-text"><span>Northumberland countryside</span></p>
+                <img class="prev-img-button" onclick="gallaryApp.nav_onClick(false)" src="/Designs/assets/prev.png" alt="previous Image">
+                <img class="next-img-button" onclick="gallaryApp.nav_onClick(true)" src="/Designs/assets/next.png" alt="next Image">
             </div>
-            <div class="thumbnails-image">
-                <img src="/Designs/assets/thumbs/9910_04_7349_web.jpg" alt="thumb1">
-                <img src="/Designs/assets/thumbs/9910_04_7349_web.jpg" alt="thumb1">
-                <img src="/Designs/assets/thumbs/9910_04_7349_web.jpg" alt="thumb1">
-                <img src="/Designs/assets/thumbs/9910_04_7349_web.jpg" alt="thumb1">
-                <img src="/Designs/assets/thumbs/9910_04_7349_web.jpg" alt="thumb1">
+            <div class="thumbnails" onclick="gallaryApp.thumbnail_onClick(event)">
+                <!-- 
+                    <img class="thumbnail-img" src="/Designs/assets/thumbs/9910_04_7349_web.jpg" alt="thumbnail 1">
+                -->
             </div>
         </div>
         <div class="links col-4">
@@ -65,7 +66,7 @@
         </div>
     </div>
     <footer>
-        @copyright - This is footer
+       
     </footer>
 </body>
 

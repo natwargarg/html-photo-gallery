@@ -1,26 +1,70 @@
+
 html *{
     box-sizing: border-box;
-    font-family : 'Roboto', 'Noto', sans-serif;
+    font-family : 'Open Sans', sans-serif;
 }
 body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family : 'Roboto', 'Noto', sans-serif;
-}
-/* h1,h2{
-    padding: 0.5em;
-} */
-.big-img{
-    width: 100%;
-    border: 1px solid gray; 
 }
 
+.big-img{
+    width: 100%;
+}
+.thumbnail-img{
+    box-sizing: border-box;
+    padding: 2px;
+    margin: 4px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.thumbnail-img-selected{
+    border: 1px solid white;
+}
+.thumbnail-img:hover{
+    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.36), 0 0 0 1px rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.big-image-container{
+    position: relative;
+    width: 100%;
+    padding: 0 50px 0 50px;
+}
+.big-img-text{
+    color: white;
+}
+
+.prev-img-button{
+    position: absolute;
+    left: 0px;
+    top: 35%;
+    cursor: pointer;
+}
+.next-img-button{
+    position: absolute;
+    right: 0px;
+    top: 35%;
+    cursor: pointer;
+}
+.big-img-text{
+    position: relative;
+    bottom: 2em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
 header .row:first-child {
     background-color: rgb(245, 245, 245);
 }
+footer{
+    padding-top: 2em;
+}
 
-
+.image-galary{
+    background-color: black;
+    padding: 20px;
+}
 input{
     width: 100%;
     padding: 0.5em;
@@ -41,14 +85,18 @@ ul{
 }
 li{
     list-style: none;
+    margin-bottom: 1em;
+}
+
+li a{
+    text-decoration: none;
+    color: #87a6e5;
 }
 
 input[type=button]:hover {
     background-color:orange;
 }
 header, footer{
-    /* box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-    cursor: pointer; */
     width: 100%;
 }
 /*mobile screen*/
@@ -71,7 +119,16 @@ h1{
     color: rgb(82, 82, 212);
 }
 
+/* mobile */
+.sm-hide{
+    display: none;
+}
+
+/* Desktop */
 @media (min-width:799px) {
+    .sm-hide{
+        display: block;
+    }
     .col-8{
         width: 66.66%;
         padding: 1em;
