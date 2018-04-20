@@ -1,0 +1,150 @@
+
+html *{
+    box-sizing: border-box;
+    font-family : 'Open Sans', sans-serif;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.big-img{
+    width: 100%;
+}
+.thumbnail-img{
+    box-sizing: border-box;
+    padding: 2px;
+    margin: 4px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.thumbnail-img-selected{
+    border: 1px solid white;
+}
+.thumbnail-img:hover{
+    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.36), 0 0 0 1px rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.big-image-container{
+    position: relative;
+    width: 100%;
+    padding: 0 50px 0 50px;
+}
+.big-img-text{
+    color: white;
+}
+
+.prev-img-button{
+    position: absolute;
+    left: 0px;
+    top: 35%;
+    cursor: pointer;
+}
+.next-img-button{
+    position: absolute;
+    right: 0px;
+    top: 35%;
+    cursor: pointer;
+}
+.big-img-text{
+    position: relative;
+    bottom: 2em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+header .row:first-child {
+    background-color: rgb(245, 245, 245);
+}
+footer{
+    padding-top: 2em;
+}
+
+.image-galary{
+    background-color: black;
+    padding: 20px;
+}
+input{
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid gray;
+}
+input[type=button] {
+    background-color: #ff8112;
+    border: 1px solid orange;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+li a{
+    text-decoration: none;
+    color: #87a6e5;
+}
+
+input[type=button]:hover {
+    background-color:orange;
+}
+header, footer{
+    width: 100%;
+}
+/*mobile screen*/
+.row{
+    display: block;
+    width: 100%;
+    border-bottom: 1px inset #d6d6d6;
+}
+.col-8{
+    padding: 1em;
+    width: 100%;
+}
+.col-4{
+    padding: 1em;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    color: rgb(82, 82, 212);
+}
+
+/* mobile */
+.sm-hide{
+    display: none;
+}
+
+/* Desktop */
+@media (min-width:799px) {
+    .sm-hide{
+        display: block;
+    }
+    .col-8{
+        width: 66.66%;
+        padding: 1em;
+        /* border: 1px solid green; */
+    }
+    .col-4{
+        width: 33.33%;
+        padding: 1em;
+        /* border: 1px solid green; */
+    }
+    .row{
+        display: flex;
+        width: 100%;
+    }
+    h1{
+        text-align: left;
+    }
+        
+}

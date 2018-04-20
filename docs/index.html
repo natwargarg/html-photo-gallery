@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 002</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body onload="gallaryApp.createGallary()">
+    <header>
+        <div class="row">
+            <div class="col-8">
+                <h1>BRAND NAME</h1>
+            </div>
+            <div class="col-4">
+                <input type="search" placeholder="Search"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <h2>Simple responsive scalable photo gallery template</h2>
+            </div>
+            <div class="col-4 sm-hide">
+                <input type="button" value="Contact us" />
+            </div>
+        </div>
+    </header>
+    <div class="main-container row">
+        <div class="image-galary col-8">
+            <div class="big-image-container">
+                <img class="big-img" src="img/largePics/9910_04_7349_web.jpg" alt="selected large Image">
+                <p class="big-img-text"><span>Northumberland countryside</span></p>
+                <img class="prev-img-button" onclick="gallaryApp.nav_onClick(false)" src="img/prev.png" alt="previous Image">
+                <img class="next-img-button" onclick="gallaryApp.nav_onClick(true)" src="img/next.png" alt="next Image">
+            </div>
+            <div class="thumbnails" onclick="gallaryApp.thumbnail_onClick(event)">
+                <!-- 
+                    <img class="thumbnail-img" src="img/thumbs/9910_04_7349_web.jpg" alt="thumbnail 1">
+                -->
+            </div>
+        </div>
+        <div class="links col-4">
+            <nav>
+                <h3>External Links : </h3>
+                <ul>
+                    <li>
+                        <a href="/link1">link1</a>
+                    </li>
+                    <li>
+                        <a href="/link2">link2</a>
+                    </li>
+                    <li>
+                        <a href="/link3">link3</a>
+                    </li>
+                    <li>
+                        <a href="/link4">link4</a>
+                    </li>
+                    <li>
+                        <a href="/link5">link5</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <footer>
+       
+    </footer>
+</body>
+
+</html>
